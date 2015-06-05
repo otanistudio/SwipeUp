@@ -13,6 +13,7 @@
 		5C6169FE1B2208C700EAECE2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C6169FD1B2208C700EAECE2 /* Images.xcassets */; };
 		5C616A011B2208C700EAECE2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C6169FF1B2208C700EAECE2 /* LaunchScreen.xib */; };
 		5C616A0D1B2208C700EAECE2 /* SwipeUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C616A0C1B2208C700EAECE2 /* SwipeUpTests.swift */; };
+		5C616A201B220D4200EAECE2 /* SwipeUpCollectionControllerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C616A1F1B220D4200EAECE2 /* SwipeUpCollectionControllerCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		5C616A061B2208C700EAECE2 /* SwipeUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwipeUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C616A0B1B2208C700EAECE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C616A0C1B2208C700EAECE2 /* SwipeUpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeUpTests.swift; sourceTree = "<group>"; };
+		5C616A1F1B220D4200EAECE2 /* SwipeUpCollectionControllerCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeUpCollectionControllerCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				5C6169F61B2208C700EAECE2 /* AppDelegate.swift */,
 				5C6169F81B2208C700EAECE2 /* ViewController.swift */,
+				5C616A1F1B220D4200EAECE2 /* SwipeUpCollectionControllerCollectionViewController.swift */,
 				5C6169FA1B2208C700EAECE2 /* Main.storyboard */,
 				5C6169FD1B2208C700EAECE2 /* Images.xcassets */,
 				5C6169FF1B2208C700EAECE2 /* LaunchScreen.xib */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C6169F91B2208C700EAECE2 /* ViewController.swift in Sources */,
+				5C616A201B220D4200EAECE2 /* SwipeUpCollectionControllerCollectionViewController.swift in Sources */,
 				5C6169F71B2208C700EAECE2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +415,7 @@
 				5C616A121B2208C700EAECE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5C616A131B2208C700EAECE2 /* Build configuration list for PBXNativeTarget "SwipeUpTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +424,7 @@
 				5C616A151B2208C700EAECE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

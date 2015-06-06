@@ -35,6 +35,8 @@ class SwipeUpCollectionController: UICollectionViewController, SwipeUpCellDelega
         return cell
     }
     
+    // MARK: SwipeUpCellDelegate
+    
     func swipeUpDidFinish(tag: NSNumber) {
         let lock = dispatch_queue_create("com.otanistudio.SwipeUp.lockQueue", nil)
         dispatch_sync(lock, { () -> Void in

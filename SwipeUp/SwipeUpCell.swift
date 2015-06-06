@@ -9,14 +9,14 @@
 import UIKit
 
 protocol SwipeUpCellDelegate {
-    func swipeUpDidFinish(tag: UInt)
+    func swipeUpDidFinish(tag: NSNumber)
 }
 
 class SwipeUpCell: UICollectionViewCell, UIGestureRecognizerDelegate {
     
     var panUpGestureRecognizer: UIPanGestureRecognizer!
     var delegate: SwipeUpCellDelegate?
-    var itemTag: UInt?
+    var itemTag: NSNumber?
     
     @IBOutlet weak var swipeableView: UIImageView!
     @IBOutlet weak var tagLabel: UILabel!
@@ -29,6 +29,7 @@ class SwipeUpCell: UICollectionViewCell, UIGestureRecognizerDelegate {
         panUpGestureRecognizer = nil
         delegate = nil
         itemTag = nil
+        tagLabel.text = "x"
         swipeableView!.frame = contentView.frame
         swipeableView!.alpha = 1.0
     }
@@ -37,13 +38,14 @@ class SwipeUpCell: UICollectionViewCell, UIGestureRecognizerDelegate {
         return "SwipeUpCollectionCellID"
     }
     
-    func configure(delegate: SwipeUpCellDelegate, tag: UInt) {
+    func configure(delegate: SwipeUpCellDelegate, tag: NSNumber) {
         panUpGestureRecognizer = UIPanGestureRecognizer(target: self, action: "didPanUp:");
         panUpGestureRecognizer?.delegate = self
         swipeableView!.image = UIImage(named: "derp.jpg")
         addGestureRecognizer(panUpGestureRecognizer!)
         self.delegate = delegate
         itemTag = tag
+        tagLabel.text = tag.stringValue
     }
     
     internal func didPanUp(gesture: UIGestureRecognizer) {

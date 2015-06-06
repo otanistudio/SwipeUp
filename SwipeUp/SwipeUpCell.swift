@@ -21,6 +21,10 @@ class SwipeUpCell: UICollectionViewCell, UIGestureRecognizerDelegate {
         panUpGestureRecognizer = nil
     }
     
+    class func cellID() -> String {
+        return "SwipeUpCollectionCellID"
+    }
+    
     func configure() {
         panUpGestureRecognizer = UIPanGestureRecognizer(target: self, action: "didPanUp:");
         panUpGestureRecognizer?.delegate = self

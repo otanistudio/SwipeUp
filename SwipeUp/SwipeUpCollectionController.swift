@@ -8,8 +8,6 @@
 
 import UIKit
 
-let reuseIdentifier = "SwipeUpCollectionCellID"
-
 class SwipeUpCollectionController: UICollectionViewController {
 
     override func viewDidLoad() {
@@ -27,7 +25,7 @@ class SwipeUpCollectionController: UICollectionViewController {
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! SwipeUpCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(SwipeUpCell.cellID(), forIndexPath: indexPath) as! SwipeUpCell
         cell.configure()
         // Configure the cell
     

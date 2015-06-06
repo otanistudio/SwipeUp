@@ -38,10 +38,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--Swipe Up Collection Controller Collection View Controller-->
+        <!--Swipe Up Collection Controller-->
         <scene sceneID="sPX-HO-bQ3">
             <objects>
-                <collectionViewController id="fKG-ZD-Kkq" customClass="SwipeUpCollectionControllerCollectionViewController" customModule="SwipeUp" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="fKG-ZD-Kkq" userLabel="Swipe Up Collection Controller" customClass="SwipeUpCollectionController" customModule="SwipeUp" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="dtU-n7-MJ3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

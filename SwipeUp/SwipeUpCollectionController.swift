@@ -10,11 +10,10 @@ import UIKit
 
 let reuseIdentifier = "SwipeUpCollectionCellID"
 
-class SwipeUpCollectionControllerCollectionViewController: UICollectionViewController {
+class SwipeUpCollectionController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 
     // MARK: UICollectionViewDataSource

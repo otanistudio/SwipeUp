@@ -14,7 +14,7 @@ class SwipeUpCollectionControllerCollectionViewController: UICollectionViewContr
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
 
     // MARK: UICollectionViewDataSource
@@ -24,12 +24,12 @@ class SwipeUpCollectionControllerCollectionViewController: UICollectionViewContr
     }
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return 12
     }
 
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! UICollectionViewCell
-    
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! SwipeUpCell
+        cell.configure()
         // Configure the cell
     
         return cell

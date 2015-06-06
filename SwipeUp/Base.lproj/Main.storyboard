@@ -67,15 +67,30 @@
                                                 <constraint firstAttribute="height" constant="118" id="gXg-PD-Naw"/>
                                             </constraints>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UO8-Tr-fjQ">
+                                            <rect key="frame" x="8" y="73" width="81" height="37"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="37" id="5ll-uB-QZM"/>
+                                                <constraint firstAttribute="width" constant="81" id="V4a-3E-m8e"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <size key="shadowOffset" width="1" height="1"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
                                     <constraint firstAttribute="centerY" secondItem="WTb-ir-nbp" secondAttribute="centerY" id="POv-Ct-Z2U"/>
+                                    <constraint firstItem="UO8-Tr-fjQ" firstAttribute="bottom" secondItem="98l-RA-6Mb" secondAttribute="bottomMargin" id="ZxM-jo-SzB"/>
                                     <constraint firstAttribute="centerX" secondItem="WTb-ir-nbp" secondAttribute="centerX" id="ggo-vI-icq"/>
+                                    <constraint firstItem="UO8-Tr-fjQ" firstAttribute="leading" secondItem="98l-RA-6Mb" secondAttribute="leadingMargin" id="rIh-mL-2cs"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="swipeableView" destination="WTb-ir-nbp" id="7P0-NM-wID"/>
+                                    <outlet property="tagLabel" destination="UO8-Tr-fjQ" id="07P-L5-wNX"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>

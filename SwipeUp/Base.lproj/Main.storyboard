@@ -45,6 +45,7 @@
                     <collectionView key="view" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="dtU-n7-MJ3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Vz8-2y-lsK">
                             <size key="itemSize" width="118" height="118"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -69,7 +70,6 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <color key="backgroundColor" red="0.87058823529999996" green="0.70196078429999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="centerY" secondItem="WTb-ir-nbp" secondAttribute="centerY" id="POv-Ct-Z2U"/>
                                     <constraint firstAttribute="centerX" secondItem="WTb-ir-nbp" secondAttribute="centerX" id="ggo-vI-icq"/>

@@ -8,9 +8,16 @@
 
 import UIKit
 
+protocol SwipeUpCellDelegate {
+    func swipeUpDidFinish(tag: UInt)
+}
+
 class SwipeUpCell: UICollectionViewCell, UIGestureRecognizerDelegate {
     
     var panUpGestureRecognizer: UIPanGestureRecognizer!
+    var delegate: SwipeUpCellDelegate?
+    var itemTag: UInt?
+    
     @IBOutlet weak var swipeableView: UIImageView!
     
     required init(coder aDecoder: NSCoder) {
@@ -19,6 +26,8 @@ class SwipeUpCell: UICollectionViewCell, UIGestureRecognizerDelegate {
     
     override func prepareForReuse() {
         panUpGestureRecognizer = nil
+        delegate = nil
+        itemTag = nil
         swipeableView!.frame = contentView.frame
         swipeableView!.alpha = 1.0
     }
@@ -27,11 +36,13 @@ class SwipeUpCell: UICollectionViewCell, UIGestureRecognizerDelegate {
         return "SwipeUpCollectionCellID"
     }
     
-    func configure() {
+    func configure(delegate: SwipeUpCellDelegate, tag: UInt) {
         panUpGestureRecognizer = UIPanGestureRecognizer(target: self, action: "didPanUp:");
         panUpGestureRecognizer?.delegate = self
         swipeableView!.image = UIImage(named: "derp.jpg")
         addGestureRecognizer(panUpGestureRecognizer!)
+        self.delegate = delegate
+        itemTag = tag
     }
     
     internal func didPanUp(gesture: UIGestureRecognizer) {
@@ -89,8 +100,8 @@ class SwipeUpCell: UICollectionViewCell, UIGestureRecognizerDelegate {
                             swipableRect.size.width,
                             swipableRect.size.height)
                         self!.swipeableView.alpha = 0.0
-                    }, completion:{ (finished: Bool) -> Void in
-                        println("finished move and fade away")
+                    }, completion:{ [weak self](finished: Bool) -> Void in
+                        self!.delegate?.swipeUpDidFinish(self!.itemTag!)
                 } )
                 
             }

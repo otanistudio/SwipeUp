@@ -48,11 +48,11 @@ class SwipeUpCell: UICollectionViewCell, UIGestureRecognizerDelegate {
         } else if (gesture == self.panUpGestureRecognizer && gesture.state == UIGestureRecognizerState.Ended) {
             let swipableRect = self.swipeableView.frame;
             
-            println("SwipeUpCell: swipableRect.origin.y: \(swipableRect.origin.y)");
-            println("SwipeUpCell: self.contentView.frame.size.height: \(self.contentView.frame.size.height)");
+//            println("SwipeUpCell: swipableRect.origin.y: \(swipableRect.origin.y)");
+//            println("SwipeUpCell: self.contentView.frame.size.height: \(self.contentView.frame.size.height)");
             
             let velocity = panUpGestureRecognizer.velocityInView(self.contentView)
-            println("SwipeUpCell velocity in view: \(velocity)");
+//            println("SwipeUpCell velocity in view: \(velocity)");
             
             /*
                 Naïve solution: If the bottom edge of the swipeableRect needs to cross
@@ -89,5 +89,16 @@ class SwipeUpCell: UICollectionViewCell, UIGestureRecognizerDelegate {
                 
             }
         }
+    }
+    
+    // UIGestureRecognizerDelegate
+    
+    override func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
+        if (!gestureRecognizer.isKindOfClass(UIPanGestureRecognizer.self)) {
+            return false
+        }
+        let panRecognizer = gestureRecognizer as! UIPanGestureRecognizer
+        let translation = panRecognizer.translationInView(contentView)
+        return abs(translation.x) < abs(translation.y)
     }
 }

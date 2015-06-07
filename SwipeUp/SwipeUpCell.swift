@@ -29,7 +29,7 @@ class SwipeUpCell: UICollectionViewCell, UIGestureRecognizerDelegate {
         panUpGestureRecognizer = nil
         delegate = nil
         itemTag = nil
-        tagLabel.text = "x"
+        tagLabel.text = ""
         swipeableView!.frame = contentView.frame
         swipeableView!.alpha = 1.0
     }

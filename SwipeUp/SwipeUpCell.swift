@@ -49,8 +49,6 @@ class SwipeUpCell: UICollectionViewCell, UIGestureRecognizerDelegate {
     }
     
     internal func didPanUp(gesture: UIGestureRecognizer) {
-//        println("SwipeUpCell: gesture: \(gesture)")
-        
         if (gesture == panUpGestureRecognizer
             && gesture.numberOfTouches() == 1
             && gesture.state == UIGestureRecognizerState.Changed) {
@@ -66,13 +64,8 @@ class SwipeUpCell: UICollectionViewCell, UIGestureRecognizerDelegate {
                 let percent = contentView.bounds.size.height / denom;
                 swipeableView.alpha = percent;
         } else if (gesture == panUpGestureRecognizer && gesture.state == UIGestureRecognizerState.Ended) {
-            let swipableRect = swipeableView.frame;
-            
-//            println("SwipeUpCell: swipableRect.origin.y: \(swipableRect.origin.y)");
-//            println("SwipeUpCell: self.contentView.frame.size.height: \(self.contentView.frame.size.height)");
-            
+            let swipableRect = swipeableView.frame;            
             let velocity = panUpGestureRecognizer.velocityInView(contentView)
-            println("SwipeUpCell velocity in view: \(velocity)");
             
             /*
                 Naïve solution: If the bottom edge of the swipeableRect needs to cross

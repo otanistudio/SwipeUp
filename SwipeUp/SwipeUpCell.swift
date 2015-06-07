@@ -97,7 +97,7 @@ class SwipeUpCell: UICollectionViewCell, UIGestureRecognizerDelegate {
                             swipableRect.size.height)
                         self!.swipeableView.alpha = 0.0
                     }, completion:{ [weak self](finished: Bool) -> Void in
-                        self!.delegate?.swipeUpDidFinish(self!.itemTag!)
+                        self!.delegate.swipeUpDidFinish(self!.itemTag!)
                 } )
                 
             }

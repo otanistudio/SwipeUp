@@ -15,8 +15,8 @@ protocol SwipeUpCellDelegate {
 class SwipeUpCell: UICollectionViewCell, UIGestureRecognizerDelegate {
     
     var panUpGestureRecognizer: UIPanGestureRecognizer!
-    var delegate: SwipeUpCellDelegate?
-    var itemTag: NSNumber?
+    var delegate: SwipeUpCellDelegate!
+    var itemTag: NSNumber!
     
     @IBOutlet weak var swipeableView: UIImageView!
     @IBOutlet weak var tagLabel: UILabel!

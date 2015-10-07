@@ -21,7 +21,7 @@ class SwipeUpCell: UICollectionViewCell, UIGestureRecognizerDelegate {
     @IBOutlet weak var swipeableView: UIImageView!
     @IBOutlet weak var tagLabel: UILabel!
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -17,8 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YIw-K0-K85">
+                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YIw-K0-K85">
                                 <rect key="frame" x="0.0" y="452" width="600" height="128"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="38g-Mx-nyG"/>
                                 </constraints>
@@ -27,6 +29,7 @@
                                 </connections>
                             </containerView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="YIw-K0-K85" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="LpM-YG-E9Q"/>
@@ -45,6 +48,7 @@
                     <collectionView key="view" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="dtU-n7-MJ3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="128"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Vz8-2y-lsK">
                             <size key="itemSize" width="118" height="118"/>
@@ -54,7 +58,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SwipeUpCollectionCellID" id="98l-RA-6Mb" customClass="SwipeUpCell" customModule="SwipeUp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <rect key="frame" x="0.0" y="5" width="118" height="118"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="118" height="118"/>
@@ -62,6 +66,7 @@
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WTb-ir-nbp" userLabel="Swipable Image View">
                                             <rect key="frame" x="0.0" y="0.0" width="118" height="118"/>
+                                            <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="118" id="aJc-nL-US4"/>
                                                 <constraint firstAttribute="height" constant="118" id="gXg-PD-Naw"/>
@@ -69,6 +74,7 @@
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UO8-Tr-fjQ">
                                             <rect key="frame" x="8" y="73" width="81" height="37"/>
+                                            <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="37" id="5ll-uB-QZM"/>
                                                 <constraint firstAttribute="width" constant="81" id="V4a-3E-m8e"/>
@@ -80,8 +86,10 @@
                                             <size key="shadowOffset" width="1" height="1"/>
                                         </label>
                                     </subviews>
+                                    <animations/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="centerY" secondItem="WTb-ir-nbp" secondAttribute="centerY" id="POv-Ct-Z2U"/>
                                     <constraint firstItem="UO8-Tr-fjQ" firstAttribute="bottom" secondItem="98l-RA-6Mb" secondAttribute="bottomMargin" id="ZxM-jo-SzB"/>
